@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.google.com/css?family=Baloo+Bhai|Bree+Serif&display=swap">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title> History of Russia </title>
+<style>
+body,
+        html {
+            width: 100%;
+        }
+
+        #body {
+            margin: 0px;
+            padding: 0px;
+            background: rgb(255, 255, 255);
+        }
+
+
+        /* Navigation Bar */
+        .navbar {
+            /* overflow: hidden; */
+            width: 100%;
+            background-color: rgb(18, 18, 19);
+            padding: 0rem;
+            margin: 0px;
+            height: 82px;
+        }
+
+
+        /* :Brand Name */
+        .nav-brand {
+            font-size: 30px;
+            font-weight: bold;
+            display: inline;
+            text-align: center;
+            text-shadow: 5px 5px 25px rgb(0, 0, 0);
+        }
+
+
+        /* :Nav Contents */
+        .nav-content {
+            float: right;
+            font-size: 22px;
+            margin-right: 80px;
+        }
+
+        /*Links in Nav Content  */
+        .navbar a {
+            float: left;
+            color: white;
+            text-align: center;
+            padding: 28px 18px;
+            text-decoration: none;
+        }
+
+        /* Dropdown Content Begins here */
+        .nav-dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        /* Dropdown Link and it's child */
+        .nav-dropdown .dropdown-btn {
+            font-size: 22px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 28px 18px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+
+        .nav-content a:hover,
+        .nav-dropdown:hover .dropdown-btn {
+            background-color: rgb(35, 37, 37);
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .nav-dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* --------------------Navigation Bar Ends Here!-------------------- */
+
+        /* Home Start */
+
+        #home {
+            width: 100%;
+            margin-left: 0px;
+            margin-top: -28px;
+            height: 700px;
+            background-color: rgb(219, 219, 219);
+        }
+
+        #home h1 {
+            text-align: center;
+            font-size: 34px;
+            padding: 30px;
+            font-family: 'Bree Serif', serif;
+        }
+
+        #home p {
+            margin-left: 16px;
+            font-size: 22px;
+            text-align: center;
+        }
+
+
+        /* --------------Home End!----------- */
+
+        /*------------ About Begins-------------*/
+        #about {
+            width: 100%;
+            margin-left: 0px;
+            margin-top: -28px;
+            height: 660px;
+            background-color: rgb(190, 184, 184);
+            overflow: hidden;
+        }
+
+        #about h2 {
+            text-align: center;
+            font-size: 34px;
+            padding: 30px;
+            font-family: 'Bree Serif', serif;
+        }
+
+        #about p {
+            text-align: center;
+            font-size: 22px;
+        }
+
+
+        iframe {
+            margin-left: 10px;
+            width: 95%;
+            height: 340px;
+        }
+
+        /* -----------About Ends-------------------*/
+
+        /* ---------------services starts-------------- */
+        #services {
+            width: 100%;
+            margin-left: 0px;
+            margin-top: -28px;
+            height: 3000px;
+            background-color: rgb(190, 184, 184);
+            overflow: hidden;
+        }
+
+        #services h1 {
+            text-align: center;
+            font-size: 34px;
+            padding: 30px;
+            font-family: 'Bree Serif', serif;
+        }
+
+
+        /* ai */
+        #ai {
+            margin-left: 30px;
+            width: 90%;
+            height: 19%;
+            overflow: hidden;
+            background-color: rgb(129, 126, 126);
+        }
+
+        /* ai ends */
+
+        /*  gaming*/
+        #gaming {
+            margin-left: 30px;
+            margin-top: -29px;
+            width: 90%;
+            height: 19%;
+            overflow: hidden;
+            background-color: rgb(129, 126, 126);
+        }
+
+        /* gaming ends */
+
+        /* webdev */
+        #webdev {
+            margin-left: 30px;
+            margin-top: -29px;
+            width: 90%;
+            height: 19%;
+            overflow: hidden;
+            background-color: rgb(129, 126, 126);
+        }
+
+        /* webdev ends */
+
+        /* mad */
+        #mad {
+            margin-left: 30px;
+            overflow: hidden;
+            margin-top: -29px;
+            width: 90%;
+            height: 19%;
+            background-color: rgb(129, 126, 126);
+        }
+
+        /* mad ends */
+
+        /* hacking */
+        #hacking {
+            margin-left: 30px;
+            margin-top: -29px;
+            width: 90%;
+            overflow: hidden;
+            height: 19%;
+            background-color: rgb(129, 126, 126);
+        }
+
+        /* hacking ends */
+
+        .service-container {
+            display: flex;
+        }
+
+        .service-container img {
+            padding-left: 40px;
+            width: 35%;
+        }
+
+        .service-head {
+            text-align: center;
+            font-size: 28px;
+            padding: 26px;
+            font-family: Arial;
+        }
+
+        .service-para {
+            text-align: center;
+            font-size: 22px;
+        }
+
+        /* ------------------services ends---------------- */
+
+        /* Rate the Technology */
+
+        #rating {
+            width: 100%;
+            margin-left: 0px;
+            /* margin-top: -28px; */
+            box-sizing: border-box;
+            background-color: rgb(117, 115, 115);
+            overflow: hidden;
+        }
+
+        #rate-heading {
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;
+            padding-left: 16px;
+        }
+
+        .table {
+            padding-left: 16px;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        td {
+            border: 3px solid black;
+            padding: 5px;
+            width: 175px;
+            vertical-align: middle;
+        }
+
+        th {
+            border: 3px solid black;
+            padding: 5px;
+            text-align: left;
+            width: 175px;
+            vertical-align: middle;
+        }
+
+        .btn {
+            padding: 0px 2px;
+            border: 1px solid white;
+            background-color: rgb(97, 96, 96);
+            color: #281d1d;
+            margin: 9px;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            float: inherit;
+        }
+
+        .btn:hover {
+            background-color: rgb(204, 197, 197);
+            color: #000000;
+        }
+
+        /* Rate the Technology Ends! */
+
+        /* Technology start */
+        #technology {
+            overflow: hidden;
+        }
+
+        #technology h1 {
+            text-align: center;
+            font-size: 34px;
+            padding: 30px;
+            font-family: 'Bree Serif', serif;
+        }
+
+        /* Technology end */
+
+        /* Technologies to work on */
+        .main {
+            width: 500px;
+            text-align: center;
+            margin: 0 auto;
+            border: 2px solid #d7d7d7;
+            margin-top: 20px;
+            font-family: sans-serif;
+        }
+
+        .main h1 {
+            text-align: center;
+            background-color: #d4d4d4;
+            padding: 30px 0px;
+            margin-top: 0px;
+        }
+
+        .main ul {
+            list-style: none;
+            font-size: 20px;
+            color: #686868;
+            margin-left: -40px;
+            margin-bottom: 0px;
+        }
+
+        .main li {
+            border-bottom: 1px solid #ededed;
+            background-color: #f4f4f4;
+            padding: 10px 0px;
+            margin-bottom: 5px;
+        }
+
+        .main li span {
+            cursor: pointer;
+            position: relative;
+            float: right;
+            margin-right: 10px;
+        }
+
+        .addItem {
+            position: relative;
+            padding-bottom: 0px;
+            height: 30px;
+        }
+
+        .addText {
+            width: 80%;
+            height: 30px;
+        }
+
+        .addItem button {
+            height: 35px;
+            width: 50px;
+        }
+
+        /* Technologies to work on END */
+
+
+        /* signup form start */
+        #signuphead {
+            text-align: center;
+            font-size: 30px;
+        }
+
+        #wrap {
+            max-width: 350px;
+            border-radius: 20px;
+            margin: auto;
+            background: rgba(0, 0, 0, 0.8);
+            box-sizing: border-box;
+            padding: 20px;
+            color: #fff;
+            margin-top: 100px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        input[type=text],
+        [type=password],
+        [type=tel],
+        [type=email],
+        [type=username] {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 12px 5px;
+            background: rgba(0, 0, 0, 0.10);
+            outline: none;
+            border: none;
+            border-bottom: 1px dotted #fff;
+            color: #fff;
+            border-radius: 5px;
+            margin: 5px;
+            font-weight: bold;
+        }
+
+        input[type=submit] {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 10px 0;
+            margin-top: 30px;
+            outline: none;
+            border: none;
+            background: #60adde;
+            opacity: 0.7;
+            border-radius: 20px;
+            font-size: 20px;
+            color: #fff;
+        }
+
+        input[type=submit]:hover {
+            background: #003366;
+            opacity: 0.7;
+        }
+
+        /* signup form end */
+
+        /* tech-table start */
+        #rating1 {
+            width: 100%;
+            margin-left: 0px;
+            box-sizing: border-box;
+            background-color: rgb(117, 115, 115);
+            overflow: hidden;
+        }
+
+        #rate-heading1 {
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;
+            padding-left: 16px;
+        }
+
+        /* tech-table start */
+        /* icon */
+        #icon {
+            float: right;
+            margin-right: 20px;
+            margin-top: 24px;
+            display: none;
+        }
+
+        #icon span {
+            display: block;
+            width: 30px;
+            height: 5px;
+            background: #ffffff;
+            margin: 3px 0px;
+        }
+
+        /* icon end */
+
+        /*/* responsiveness */
+        @media (max-width:1000px) {
+            .nav-content {
+                position: fixed;
+                width: 100%;
+                height: 100vh;
+                background: #2f3640;
+                top: 80px;
+                left: -100%;
+                text-align: center;
+                transition: all .5s;
+            }
+
+            #icon {
+                display: block;
+            }
+
+            .nav-content a .dropdown-content {
+                display: block;
+                margin: 50px 0;
+                line-height: 30px;
+            }
+
+        }
+
+        /* responsiveness ends */
+	 </style>
+</head>
+<body>
+<!-- Nav Start -->
+    <nav class="navbar">
+        <a href="index.html" class="nav-brand" title="TravelRussia">TravelRussia</a>
+        <div class="nav-content">
+            <a href="history.html">History</a>
+            <a href="cuisine.html">Cuisine</a>
+            <a href="places.html">Places</a>
+            <a href="travelreview.html">Reviews</a>
+            <a href="festivals.html">Festivals</a>
+        </div>
+        <div id="icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    <!-- Nav end -->
+<img src="images/History1.jpg" alt="Russian History" width="500" height="333">
+
+<h1>Introduction</h1>
+
+<img src="images/Map1.jpg" width="500" height="333">
+
+	<p>Russia is a country that stretches over a vast expanse of eastern Europe and northern Asia. Once the preeminent republic of the Union of Soviet Socialist Republics (U.S.S.R.; commonly known as the Soviet Union), Russia became an independent country after the dissolution of the Soviet Union in December 1991.</p>
+	
+	<h1>People of Russia</h1>
+
+	<img src="images/People1.jpg" width="500" height="333">
+	
+	<p>The inhabitants of Russia are quite diverse. Most are ethnic Russians, but there also are more than 120 other ethnic groups present, speaking many languages and following disparate religious and cultural traditions. Most of the Russian population is concentrated in the European portion of the country, especially in the fertile region surrounding Moscow, the capital. Moscow and St. Petersburg (formerly Leningrad) are the two most important cultural and financial centres in Russia and are among the most picturesque cities in the world. Russians are also populous in Asia, however; beginning in the 17th century, and particularly pronounced throughout much of the 20th century, 
+			a steady flow of ethnic Russians and Russian-speaking people moved eastward into Siberia, where cities such as Vladivostok and Irkutsk now flourish.</p>
+
+			<h1>Climate Of Russia</h1>
+			<img src="images/Mountain1.webp" width="500" height="333">
+	
+			<p>Russia’s climate is extreme, with forbidding winters that have several times famously saved the country from foreign invaders.
+			 Although the climate adds a layer of difficulty to daily life, the land is a generous source of crops and materials, including vast reserves of oil, gas, and precious metals. That richness of resources has not translated into an easy life for most of the country’s people, however; indeed, much of Russia’s history has been a grim tale of the very wealthy and powerful few ruling over a great mass of their poor and powerless compatriots. Serfdom endured well into the modern era; the years of Soviet communist rule (1917–91), especially the long dictatorship of Joseph Stalin, saw subjugation of a different and more exacting sort.</p>
+			 
+			 <h1>Republic Of Russia</h1>
+
+			 <img src="images/Flag1.jpg" width="500" height="333">
+
+			 <p>The Russian republic was established immediately after the Russian Revolution of 1917 and became a union republic in 1922. During the post-World War II era, Russia was a central player in international affairs, locked in a Cold War struggle with the United States. In 1991, following the dissolution of the Soviet Union, Russia joined with several other former Soviet republics to form a loose coalition, the Commonwealth of Independent States (CIS). Although the demise of Soviet-style communism and the subsequent collapse of the Soviet Union brought profound political and economic changes, including the beginnings of the formation of a large middle class, for much of the postcommunist era Russians had to endure a generally weak economy, high inflation, and a complex of social ills that served to lower life expectancy significantly. Despite such profound problems, Russia showed promise of achieving its potential as a world power once again, as if to exemplify a favourite proverb,
+		 stated in the 19th century by Austrian statesman Klemens, Fürst (prince) von Metternich: “Russia is never as strong as she appears, and never as weak as she appears.”</p>
+<div style="text-align: center; background-color: black; color: white;">
+            === Website Developers ===
+        <ol>
+          <li>Barretto, Kurt Staniel</li>
+          <li>Bauzon, Shayne Victor</li>
+          <li>Garcia, Marcus Ram</li>
+		  <li>Gomez, Josh Dominic</li>
+		  <li>Lebosada, Jagg Aethan</li>
+        </ol>
+    </div>
+
+		</body>
+</html>

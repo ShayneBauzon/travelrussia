@@ -9,7 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <title>A Travel Website about Russia</title>
+	<title> Travel Reviews Around Russia </title>
     <style>
         
         body,
@@ -524,8 +524,20 @@
         /* responsiveness ends */
     </style>
 </head>
-<body id="body" ng-app="myApp">
-    <!-- Nav Start -->
+        
+    <style>
+        p {
+            font-size: 25px; 
+        }
+        li {
+            font-size: 20px;
+        }
+        b {
+            font-size: 25px;
+        }
+    </style>
+    <body id="body" ng-app="myApp">
+	<!-- Nav Start -->
     <nav class="navbar">
         <a href="index.html" class="nav-brand" title="TravelRussia">TravelRussia</a>
         <div class="nav-content">
@@ -542,188 +554,40 @@
         </div>
     </nav>
     <!-- Nav end -->
-    <br>
-    <!-- Home Start -->
-    <section id="home">
-        <h1>TravelRussia</h1>
-        <p>Welcome to Russia!</p>
-        <p>Russia, or the Russian Federation, is a country spanning Eastern Europe and Northern Asia. It is the largest<br>
-            country in the world, covering over 17,125,191 square kilometres, and encompassing one-eighth of Earth's<br>
-            inhabitable landmass.</p>
-        <p>Tourism in Russia has seen rapid growth since the late Soviet times, first domestic tourism and then<br>
-            international tourism as well.</p>
-        <p>Spend some time in Russia to have the best holidays Experience of your life.</p>
-        <p>Russia is a motherland to more than 160 ethnic groups. People of different religions have for centuries<br>
-		   been living together in peace. Russia is home for more than 10 millon indigenous Muslims.</p>
-
-    </section>
-    <br>
-
-    <section id="about">
-        <h2>Russia at Glance</h2>
-        <p class="center">Russia is the largest country in the world spread over vast areas in Europe and Asia with the<br>
-		access to the Atlantic, Pacific and Arctic oceans. It covers nine time zones and shares more than 20,000 km of<br>
-		common border with other states.</p>
-        <p>
-            Our country is a federation of 85 constituent regions. Two of those have acceded to Russia early in 2014 as a<br>
-			result of historic reunion of the Crimea with the Russian Federation. Exercising their right to self-determination<br>
-			enshrined in the UN Charter, the Crimean people held a vital referendum on March 16, 2014 in full compliance with<br>
-			democratic procedures and international norms. More than 82 percent of the electorate took part in the vote. Over 96<br>
-			percent of them spoke out in favour of reuniting Russia. Two days later the Republic of Crimea and the city of Sevastopol<br>
-			joined the Russian Federation on the basis of the international treaty concluded between them. This event was widely<br>
-			celebrated both in the Crimea and in the rest of Russia with people considering it as a restoration of the historical justice.
-        </p>
-    </section>
-
-    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="images/carousel1.jpg" class="d-block w-100" alt="First slide">
-            </div>
-            <div class="carousel-item">
-                <img src="images/carousel2.jpg" class="d-block w-100" alt="Second slide">
-            </div>
-            <div class="carousel-item">
-                <img src="images/carousel3.jpg" class="d-block w-100" alt="Third slide">
-            </div>
-        </div>
-    </div>
-	
-    <div id="rating">
-        <div>
-            <span id="rate-heading">Rate the Experience if you visited some of these places from Russia!: Click here to
-                Hide</span>
-        </div>
-
+        <body style="background-color:rgb(190, 184, 184);"></body>
+        <h1> This is the travel reviews in Russia </h1>
+        <h3> The greatest feeling we experience in our working day is the satisfaction of hearing from our clients after the journey is over. It is very rewarding to know we've achieved more than what the client had hoped for when they picked us to handle their journey. We are happy to have 99.8% customer satisfaction rate. 
+            As for the remaining 0.2%, we are constantly working on making them happy as well.</h3>
+        <hr>
+        <P> This is the reviews by those who went to russia and gave wonderful 5 stars reviews to the country</P>
+        <hr>
+        <br><br>
+        <p> <b>Carlos Cordova</b> from the uniteds states "I am very satisfied."</p>
         <br>
+        <p> <b>Chris W</b> from australia "WOW. From the choice of hotels, an itinerary that ran to plan, the amazing Guides and drivers, and of course the stunning cities of Moscow and St Petersburg. 
+            No long queues for entry to museums, churches, and palaces. " </p>
         <br>
-        <div id="rate-table" class="table" ng-controller="myController">
-            <table>
-                <thead>
-                    <tr class="table-items">
-                        <th>Name</th>
-                        <th>Likes</th>
-                        <th>Dislikes</th>
-                        <th>Like/Dislike</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="table-items" ng-repeat="technology in technologies">
-                        <td>{{technology.name}}</td>
-                        <td>{{technology.likes}}</td>
-                        <td>{{technology.dislikes}}</td>
-                        <td>
-                            <input type="button" class="btn" ng-click="incrementLikes(technology)" value="Like">
-                            <input type="button" class="btn" ng-click="incrementDislikes(technology)" value="Dislike">
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-    <section id="technology">
-        <h1>Activities</h1>
-        <div id="javascript">
-            <div>
-                <h2 class="service-head">Foods</h2>
-                <div class="service-container">
-                    <img src="images/food1.jpg" alt="russia food 1">
-                    <img src="images/food2.jpg"
-                        alt="russia food 2">
-                </div>
-                <p class="service-para">There are numerous dishes made of dough such as pies, cakes, rolls, blini, etc.<br>
-				The Russian culinary palette is also rich in meat, poultry, and fish dishes which are served on various occasions.</p>
-            </div>
-        </div>
-        <div id="jquery">
-            <div>
-                <h2 class="service-head">Night Life</h2>
-                <div class="service-container">
-                    <img src="images/night1.jpg" alt="nightlife 1">
-                    <img src="images/night2.jpg"
-                        alt="nightlife 2">
-                </div>
-                <p class="service-para">Russia nightlife thrives on local vodka, freshly brewed beer, and gigs all at Soviet<br>
-				retro drinking hot spots!</p>
-            </div>
-        </div>
-        <div id="angular">
-            <div>
-                <h2 class="service-head">Travelling</h2>
-                <div class="service-container">
-                    <img src="images/travel1.jpg"
-                        alt="travel 1">
-                    <img src="images/travel2.jpg" alt="travel 2">
-                </div>
-                <p class="service-para">Russia, or the Russian Federation, is a country spanning Eastern Europe and Northern Asia.<br>
-				It is the largest country in the world, covering over 17,125,191 square kilometres, and encompassing one-eighth of Earth's<br>
-				inhabitable landmass.</p>
-            </div>
-        </div>
-    </section>
-	<hr>
-    <h1 style="text-align: center ;">Add something you wish to add in Russia tourism</h1>
-    <div class="main" ng-controller="myListController">
-        <h1>WishList</h1>
-        <div class="addItem">
-            <input ng-model="newItem" placeholder="Add something you wish to add" class="addText">
-            <button ng-click="pushItem()">Add</button>
-        </div>
-        <ul>
-            <li ng-repeat="i in items">
-                {{ i }}
-                <span ng-click="deleteItem($index)">x</span>
-            </li>
-            <input class="btn" type="button" value="Submit">
-        </ul>
-    </div>
-    <hr>
-    <div>
-        <h1 id="signuphead">Click to minimize form</h1>
-    </div>
-    <div id="wrap">
-        <h2>Sign up Here</h2>
-        <form action="formaction.php" method="POST">
-            <input type="text" name="User_name" placeholder="Enter your name.." required>
-            <input type="tel" name="User_mobile_number" placeholder="Enter your Mobile no.." required>
-            <input type="email" name="User_email" placeholder="Enter your email.." required>
-            <input type="username" name="User_id" placeholder="Choose your username.." required>
-            <input type="password" name="user_password" placeholder="Choose your password.." required>
-            <input type="submit" value="Submit">
-        </form>
-    </div>
-    <br>
-    <div id="rating1">
-        <div>
-            <span id="rate-heading1">Glance Table: Click here to Hide</span>
-        </div>
+        <p> <b> Cathleen C.</b> from south africa "I must say from the day I started to book my tip till the day I got home I had one GREAT trip and experience I always felt safe and cared for help was 
+            seconds away not that I needed any I will defiantly highly recommend your company to any traveler to Russia WELL DONE to the Whole team THANK YOU for making this happen for me !!!</p>
+        <br>
+        <p>  <b>Irene Ng</b> from the united states "Overall we enjoyed the whole trip a lot. Moscow is beautiful and clean. Thank you very much for your patience and excellent organization of this tour. Everything ran very smoothly and according to schedule. The guides met us on time at hotels or at our train carriage on arrival. They all spoke good English, had a good local knowledge and were very kind and helpful. The new luxury train from Moscow to Kazan with ensuite was very comfortable. 
+            We were fortunate to have mostly fine but cool weather during our trip and lovely autumn colors out of the windows. It was a really memorable adventure going on this trip.</p>
+        <br>
+        <p>  <b>Robert Ackland</b> from the united states "I would recommend using your services again as every aspect of our tour went off without a hitch. The communication between our tour representative was excellent as we required additional days on both ends of our tour. 
+            The visa process and the logistics were flawlessly implemented. The tour lived up to all expectations and was great value for money, perfect for all ages.</p>
+        <br>
+        <p> <b> Maria Sison</b> from the united states "When my husband and I decided we wanted to travel Russia, It certainly did not disappoint. 
+            We chose the Treasures of Two Capitals tour. Booking and coordinating with them were seamless from start to finish.</p>
+        <br>
+        <p><b>Sam Champman</b> from the united states "This trip was AMAZING!!! Positively life-changing!!! Russia is a wonderful country!!! it is everything I imagined and more!!! The funny thing is after only a week and a half in, I find myself homesick and I miss Russia so much!!! The people, culture, and history truly are wonderful. Our guide was very charming, personable and informative. She was a pleasure and a privilege to have as a guide. 
+            Our St. Petersburg guide was also very informative and very well-organized and professional. Our driver did an excellent job shuttling us around St. Petersburg." </p>
+        <br>
+        <p><b>Thomas Kinder</b> from the united states "Just wanted to take a quick moment to thank you for putting together such an amazing trip! The tour guides and drivers were beyond incredible, and I would highly recommend all four of them.
+             They were beyond accommodating, extremely knowledgable, relatable, interesting, and friendly. In addition, the transportation was amazing."</p>
+        <br> 
 
-        <br>
-        <br>
-        <div id="rate-table1" class="table" ng-controller="myCompareController">
-            Row to display: <input type="number" step="1" min="0" max="5" ng-model="rowLimit">
-            <table>
-                <thead>
-                    <tr class="table-items">
-                        <th>Name</th>
-                        <th>Famous for</th>
-                        <th>Amount needed</th>
-                        <th>Minimum days</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="table-items" ng-repeat="technology in technologies | limitTo: rowLimit">
-                        <td>{{technology.name}}</td>
-                        <td>{{technology.fame}}</td>
-                        <td>{{technology.amount}}</td>
-                        <td>{{technology.days}}</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-    <br>
-    <div style="text-align: center; background-color: black; color: white;">
+    <h3>These are all the reviews given with the 5 star rating in travelling to russia</h3>
+<div style="text-align: center; background-color: black; color: white;">
             === Website Developers ===
         <ol>
           <li>Barretto, Kurt Staniel</li>
@@ -733,130 +597,5 @@
 		  <li>Lebosada, Jagg Aethan</li>
         </ol>
     </div>
-
-
-    <!-- JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
-		
-	<script>
-        alert("Carousel slideshow images might be slow because the image sizes are big");
-
-	//$(document).ready(function () {
-            //$('#icon').click(function () {
-                //$('').toggleClass('show');
-            //});
-        //});
-    </script>
-
-    <!-- JQuery -->
-    <script>
-        $(document).ready(function () {
-            $("#signuphead").click(function () {
-                if ($(this).html() == "Click to minimize form") {
-                    $(this).html("Click to maximize form");
-                }
-                else {
-                    $(this).html("Click to minimize form");
-                }
-            });
-        });
-
-        $(document).ready(function () {
-            $("#signuphead").click(function () {
-                $("#wrap").slideToggle("slow");
-            });
-        });
-
-        $(document).ready(function () {
-            $("#rate-heading").click(function () {
-                if ($(this).html() == "Rate the Experience if you visited some of these places from Russia!: Click here to Show") {
-                    $(this).html("Rate the Experience if you visited some of these places from Russia!: Click here to Hide");
-                }
-                else {
-                    $(this).html("Rate the Experience if you visited some of these places from Russia!: Click here to Show");
-                }
-            });
-        });
-
-        $(document).ready(function () {
-            $("#rate-heading").click(function () {
-                $("#rate-table").slideToggle("slow");
-            });
-        });
-        $(document).ready(function () {
-            $("#rate-heading1").click(function () {
-                $("#rate-table1").slideToggle("slow");
-            });
-        });
-
-        $(document).ready(function () {
-            $("#rate-heading1").click(function () {
-                if ($(this).html() == "Glance-Table: Click here to Hide") {
-                    $(this).html("Glance-Table: Click here to Show");
-                }
-                else {
-                    $(this).html("Glance-Table: Click here to Hide");
-                }
-            });
-        });
-    </script>
-
-    <!-- AngularJS -->
-    <script>
-        var myApp = angular.module("myApp", []).controller("myController", function ($scope) {
-            var technologies = [
-                { name: "Moscow", likes: 0, dislikes: 0 },
-                { name: "Lake Baikal", likes: 0, dislikes: 0 },
-                { name: "St. Petersburg", likes: 0, dislikes: 0 },
-                { name: "Altai", likes: 0, dislikes: 0 },
-                { name: "The Russian Tundra", likes: 0, dislikes: 0 }
-            ];
-            $scope.technologies = technologies;
-            $pushItem = function () {
-                if ($scope.newItem != {}) {
-                    $scope.items.push($scope.newItem);
-                    $scope.newItem = {};
-                }
-            }
-            $scope.deleteItem = function (index) {
-                $scope.items.splice(index, 1);
-            }
-            $scope.incrementLikes = function (technology) {
-                technology.likes++;
-            };
-            $scope.incrementDislikes = function (technology) {
-                technology.dislikes++;
-            };
-        });
-
-        myApp.controller("myListController", function ($scope) {
-            $scope.items = ["Moscow", "Lake Baikal", "St. Peterburg", "The Russian Tundra", "Altay"];
-            $scope.newItem = "";
-            $scope.pushItem = function () {
-                if ($scope.newItem != "") {
-                    $scope.items.push($scope.newItem);
-                    $scope.newItem = "";
-                }
-            }
-            $scope.deleteItem = function (index) {
-                $scope.items.splice(index, 1);
-            }
-        });
-
-        myApp.controller("myCompareController", function ($scope) {
-            var technologies = [
-                { name: "Moscow", fame: "For mountains", amount: "$ 1234", days: "7" },
-                { name: "Lake Baikal", fame: "For Beaches", amount: "$ 1000", days: "9" },
-                { name: "St. Peterburg", fame: "For Night Life", amount: "$ 890", days: "4" },
-                { name: "The Russian Tundra", fame: "For Foods", amount: "$ 1243", days: "9" },
-                { name: "Altay", fame: "For Travelling", amount: "$ 1450", days: "10" }
-            ];
-            $scope.technologies = technologies;
-            $scope.rowLimit = 3;
-        });
-    </script>
-</body>
-
+    </body>
 </html>

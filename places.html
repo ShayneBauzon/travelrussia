@@ -531,7 +531,18 @@
         <div class="nav-content">
             <a href="history.html">History</a>
             <a href="cuisine.html">Cuisine</a>
-            <a href="places.html">Places</a>
+            <div class="nav-dropdown">
+                <button class="dropdown-btn">
+                    <i>Places</i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#ai">Moscow</a>
+                    <a href="#gaming">Lake Baikal</a>
+                    <a href="#webdev">St. Petersburg</a>
+                    <a href="#mad">Altai</a>
+                    <a href="#hacking">The Russian Tundra</a>
+                </div>
+			</div>
             <a href="travelreview.html">Reviews</a>
             <a href="festivals.html">Festivals</a>
         </div>
@@ -542,188 +553,73 @@
         </div>
     </nav>
     <!-- Nav end -->
-    <br>
-    <!-- Home Start -->
-    <section id="home">
-        <h1>TravelRussia</h1>
-        <p>Welcome to Russia!</p>
-        <p>Russia, or the Russian Federation, is a country spanning Eastern Europe and Northern Asia. It is the largest<br>
-            country in the world, covering over 17,125,191 square kilometres, and encompassing one-eighth of Earth's<br>
-            inhabitable landmass.</p>
-        <p>Tourism in Russia has seen rapid growth since the late Soviet times, first domestic tourism and then<br>
-            international tourism as well.</p>
-        <p>Spend some time in Russia to have the best holidays Experience of your life.</p>
-        <p>Russia is a motherland to more than 160 ethnic groups. People of different religions have for centuries<br>
-		   been living together in peace. Russia is home for more than 10 millon indigenous Muslims.</p>
-
-    </section>
-    <br>
-
-    <section id="about">
-        <h2>Russia at Glance</h2>
-        <p class="center">Russia is the largest country in the world spread over vast areas in Europe and Asia with the<br>
-		access to the Atlantic, Pacific and Arctic oceans. It covers nine time zones and shares more than 20,000 km of<br>
-		common border with other states.</p>
-        <p>
-            Our country is a federation of 85 constituent regions. Two of those have acceded to Russia early in 2014 as a<br>
-			result of historic reunion of the Crimea with the Russian Federation. Exercising their right to self-determination<br>
-			enshrined in the UN Charter, the Crimean people held a vital referendum on March 16, 2014 in full compliance with<br>
-			democratic procedures and international norms. More than 82 percent of the electorate took part in the vote. Over 96<br>
-			percent of them spoke out in favour of reuniting Russia. Two days later the Republic of Crimea and the city of Sevastopol<br>
-			joined the Russian Federation on the basis of the international treaty concluded between them. This event was widely<br>
-			celebrated both in the Crimea and in the rest of Russia with people considering it as a restoration of the historical justice.
-        </p>
-    </section>
-
-    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="images/carousel1.jpg" class="d-block w-100" alt="First slide">
-            </div>
-            <div class="carousel-item">
-                <img src="images/carousel2.jpg" class="d-block w-100" alt="Second slide">
-            </div>
-            <div class="carousel-item">
-                <img src="images/carousel3.jpg" class="d-block w-100" alt="Third slide">
-            </div>
-        </div>
-    </div>
-	
-    <div id="rating">
-        <div>
-            <span id="rate-heading">Rate the Experience if you visited some of these places from Russia!: Click here to
-                Hide</span>
-        </div>
-
-        <br>
-        <br>
-        <div id="rate-table" class="table" ng-controller="myController">
-            <table>
-                <thead>
-                    <tr class="table-items">
-                        <th>Name</th>
-                        <th>Likes</th>
-                        <th>Dislikes</th>
-                        <th>Like/Dislike</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="table-items" ng-repeat="technology in technologies">
-                        <td>{{technology.name}}</td>
-                        <td>{{technology.likes}}</td>
-                        <td>{{technology.dislikes}}</td>
-                        <td>
-                            <input type="button" class="btn" ng-click="incrementLikes(technology)" value="Like">
-                            <input type="button" class="btn" ng-click="incrementDislikes(technology)" value="Dislike">
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-    <section id="technology">
-        <h1>Activities</h1>
-        <div id="javascript">
+<section id="services">
+<br>
+        <h1>Places</h1>
+        <div id="ai">
             <div>
-                <h2 class="service-head">Foods</h2>
+                <h2 class="service-head">Moscow</h2>
                 <div class="service-container">
-                    <img src="images/food1.jpg" alt="russia food 1">
-                    <img src="images/food2.jpg"
-                        alt="russia food 2">
+                    <img src="images/moscow1.jpg" alt="moscow1">
+                    <img src="images/moscow2.jpg" alt="moscow2">
                 </div>
-                <p class="service-para">There are numerous dishes made of dough such as pies, cakes, rolls, blini, etc.<br>
-				The Russian culinary palette is also rich in meat, poultry, and fish dishes which are served on various occasions.</p>
+                <p class="service-para">Moscow, on the Moskva River in western Russia, is the nation’s cosmopolitan capital.
+				In its historic core is the Kremlin, a complex that’s home to the president and tsarist treasures in the Armoury.</p>
             </div>
         </div>
-        <div id="jquery">
+        <div id="gaming">
             <div>
-                <h2 class="service-head">Night Life</h2>
+                <h2 class="service-head">Lake Baikal</h2>
                 <div class="service-container">
-                    <img src="images/night1.jpg" alt="nightlife 1">
-                    <img src="images/night2.jpg"
-                        alt="nightlife 2">
+                    <img src="images/lakebaikal1.jpg"
+                        alt="lakebaikal1">
+                    <img src="images/lakebaikal2.jpg" alt="lakebaikal2">
                 </div>
-                <p class="service-para">Russia nightlife thrives on local vodka, freshly brewed beer, and gigs all at Soviet<br>
-				retro drinking hot spots!</p>
+                <p class="service-para">Lake Baikal is an ancient, massive lake in the mountainous Russian region of Siberia,
+				north of the Mongolian border. Considered the deepest lake in the world.</p>
             </div>
         </div>
-        <div id="angular">
+        <div id="webdev">
             <div>
-                <h2 class="service-head">Travelling</h2>
+                <h2 class="service-head">St. Petersburg</h2>
                 <div class="service-container">
-                    <img src="images/travel1.jpg"
-                        alt="travel 1">
-                    <img src="images/travel2.jpg" alt="travel 2">
+                    <img src="images/petersburg1.jpg"
+                        alt="petersburg1">
+                    <img src="images/petersburg2.jpg"
+                        alt="petersburg2">
                 </div>
-                <p class="service-para">Russia, or the Russian Federation, is a country spanning Eastern Europe and Northern Asia.<br>
-				It is the largest country in the world, covering over 17,125,191 square kilometres, and encompassing one-eighth of Earth's<br>
-				inhabitable landmass.</p>
+                <p class="service-para">St. Petersburg is a Russian port city on the Baltic Sea. It was the imperial capital for 2 centuries,
+				having been founded in 1703 by Peter the Great, subject of the city's iconic “Bronze Horseman” statue.</p>
+            </div>
+        </div>
+        <div id="mad">
+            <div>
+                <h2 class="service-head">Altai</h2>
+                <div class="service-container">
+                    <img src="images/altai1.jpg" alt="altai1">
+                    <img src="images/altai2.jpg"
+                        alt="altai2">
+                </div>
+                <p class="service-para">Altai is a Russian republic in southern Siberia whose terrain encompasses the Altai Mountains and
+				surrounding tundra, alpine meadows and thousands of lakes.</p>
+            </div>
+        </div>
+        <div id="hacking">
+            <div>
+                <h2 class="service-head">The Russian Tundra</h2>
+                <div class="service-container">
+                    <img src="images/russiantundra1.jpg"
+                        alt="tundra1">
+                    <img src="images/russiantundra2.jpg"
+                        alt="tundra2">
+                </div>
+                <p class="service-para">About 10 percent of Russia is tundra, or treeless, marshy plain. The tundra is Russia's northernmost zone,
+				stretching from the Finnish border in the west to the Bering Strait in the east, then running south along the Pacific coast to the
+				northern Kamchatka Peninsula.</p>
             </div>
         </div>
     </section>
-	<hr>
-    <h1 style="text-align: center ;">Add something you wish to add in Russia tourism</h1>
-    <div class="main" ng-controller="myListController">
-        <h1>WishList</h1>
-        <div class="addItem">
-            <input ng-model="newItem" placeholder="Add something you wish to add" class="addText">
-            <button ng-click="pushItem()">Add</button>
-        </div>
-        <ul>
-            <li ng-repeat="i in items">
-                {{ i }}
-                <span ng-click="deleteItem($index)">x</span>
-            </li>
-            <input class="btn" type="button" value="Submit">
-        </ul>
-    </div>
-    <hr>
-    <div>
-        <h1 id="signuphead">Click to minimize form</h1>
-    </div>
-    <div id="wrap">
-        <h2>Sign up Here</h2>
-        <form action="formaction.php" method="POST">
-            <input type="text" name="User_name" placeholder="Enter your name.." required>
-            <input type="tel" name="User_mobile_number" placeholder="Enter your Mobile no.." required>
-            <input type="email" name="User_email" placeholder="Enter your email.." required>
-            <input type="username" name="User_id" placeholder="Choose your username.." required>
-            <input type="password" name="user_password" placeholder="Choose your password.." required>
-            <input type="submit" value="Submit">
-        </form>
-    </div>
-    <br>
-    <div id="rating1">
-        <div>
-            <span id="rate-heading1">Glance Table: Click here to Hide</span>
-        </div>
-
-        <br>
-        <br>
-        <div id="rate-table1" class="table" ng-controller="myCompareController">
-            Row to display: <input type="number" step="1" min="0" max="5" ng-model="rowLimit">
-            <table>
-                <thead>
-                    <tr class="table-items">
-                        <th>Name</th>
-                        <th>Famous for</th>
-                        <th>Amount needed</th>
-                        <th>Minimum days</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="table-items" ng-repeat="technology in technologies | limitTo: rowLimit">
-                        <td>{{technology.name}}</td>
-                        <td>{{technology.fame}}</td>
-                        <td>{{technology.amount}}</td>
-                        <td>{{technology.days}}</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-    <br>
-    <div style="text-align: center; background-color: black; color: white;">
+<div style="text-align: center; background-color: black; color: white;">
             === Website Developers ===
         <ol>
           <li>Barretto, Kurt Staniel</li>
@@ -732,131 +628,4 @@
 		  <li>Gomez, Josh Dominic</li>
 		  <li>Lebosada, Jagg Aethan</li>
         </ol>
-    </div>
-
-
-    <!-- JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
-		
-	<script>
-        alert("Carousel slideshow images might be slow because the image sizes are big");
-
-	//$(document).ready(function () {
-            //$('#icon').click(function () {
-                //$('').toggleClass('show');
-            //});
-        //});
-    </script>
-
-    <!-- JQuery -->
-    <script>
-        $(document).ready(function () {
-            $("#signuphead").click(function () {
-                if ($(this).html() == "Click to minimize form") {
-                    $(this).html("Click to maximize form");
-                }
-                else {
-                    $(this).html("Click to minimize form");
-                }
-            });
-        });
-
-        $(document).ready(function () {
-            $("#signuphead").click(function () {
-                $("#wrap").slideToggle("slow");
-            });
-        });
-
-        $(document).ready(function () {
-            $("#rate-heading").click(function () {
-                if ($(this).html() == "Rate the Experience if you visited some of these places from Russia!: Click here to Show") {
-                    $(this).html("Rate the Experience if you visited some of these places from Russia!: Click here to Hide");
-                }
-                else {
-                    $(this).html("Rate the Experience if you visited some of these places from Russia!: Click here to Show");
-                }
-            });
-        });
-
-        $(document).ready(function () {
-            $("#rate-heading").click(function () {
-                $("#rate-table").slideToggle("slow");
-            });
-        });
-        $(document).ready(function () {
-            $("#rate-heading1").click(function () {
-                $("#rate-table1").slideToggle("slow");
-            });
-        });
-
-        $(document).ready(function () {
-            $("#rate-heading1").click(function () {
-                if ($(this).html() == "Glance-Table: Click here to Hide") {
-                    $(this).html("Glance-Table: Click here to Show");
-                }
-                else {
-                    $(this).html("Glance-Table: Click here to Hide");
-                }
-            });
-        });
-    </script>
-
-    <!-- AngularJS -->
-    <script>
-        var myApp = angular.module("myApp", []).controller("myController", function ($scope) {
-            var technologies = [
-                { name: "Moscow", likes: 0, dislikes: 0 },
-                { name: "Lake Baikal", likes: 0, dislikes: 0 },
-                { name: "St. Petersburg", likes: 0, dislikes: 0 },
-                { name: "Altai", likes: 0, dislikes: 0 },
-                { name: "The Russian Tundra", likes: 0, dislikes: 0 }
-            ];
-            $scope.technologies = technologies;
-            $pushItem = function () {
-                if ($scope.newItem != {}) {
-                    $scope.items.push($scope.newItem);
-                    $scope.newItem = {};
-                }
-            }
-            $scope.deleteItem = function (index) {
-                $scope.items.splice(index, 1);
-            }
-            $scope.incrementLikes = function (technology) {
-                technology.likes++;
-            };
-            $scope.incrementDislikes = function (technology) {
-                technology.dislikes++;
-            };
-        });
-
-        myApp.controller("myListController", function ($scope) {
-            $scope.items = ["Moscow", "Lake Baikal", "St. Peterburg", "The Russian Tundra", "Altay"];
-            $scope.newItem = "";
-            $scope.pushItem = function () {
-                if ($scope.newItem != "") {
-                    $scope.items.push($scope.newItem);
-                    $scope.newItem = "";
-                }
-            }
-            $scope.deleteItem = function (index) {
-                $scope.items.splice(index, 1);
-            }
-        });
-
-        myApp.controller("myCompareController", function ($scope) {
-            var technologies = [
-                { name: "Moscow", fame: "For mountains", amount: "$ 1234", days: "7" },
-                { name: "Lake Baikal", fame: "For Beaches", amount: "$ 1000", days: "9" },
-                { name: "St. Peterburg", fame: "For Night Life", amount: "$ 890", days: "4" },
-                { name: "The Russian Tundra", fame: "For Foods", amount: "$ 1243", days: "9" },
-                { name: "Altay", fame: "For Travelling", amount: "$ 1450", days: "10" }
-            ];
-            $scope.technologies = technologies;
-            $scope.rowLimit = 3;
-        });
-    </script>
-</body>
-
-</html>
+</div>
